@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function() {
-    fetch("./Header/header.html")
+    fetch("./Navbar/navbar.html")
         .then(response => {
             return response.text()
         })
