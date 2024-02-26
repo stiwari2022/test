@@ -7,11 +7,11 @@ document.addEventListener("DOMContentLoaded", function() {
             document.querySelector("navbar").innerHTML = data;
         });
 
-    fetch("./Footer/footer.html")
+    fetch("./Bottom/bottom.html")
         .then(response => {
             return response.text()
         })
         .then(data => {
-            document.querySelector("footer").innerHTML = data;
+            document.querySelector("bottom").innerHTML = data;
         });
 });
