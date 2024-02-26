@@ -1,15 +1,49 @@
+<!DOCTYPE html>
 <html lang="en">
-    <head>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Page Title</title>
+</head>
+<body>
 
-    </head>
-    <body>
-  
-        <navbar></navbar>
-        
-        Content.
-        
-        dssd
-      
-      </body>
-      <script src="./General/include.js"></script>
+    <navbar></navbar>
+    
+    Content.
+    
+    <footer></footer>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        fetch("./Navbar/navbar.html")
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+                return response.text();
+            })
+            .then(data => {
+                document.querySelector("navbar").innerHTML = data;
+            })
+            .catch(error => {
+                console.error('There has been a problem with your fetch operation:', error);
+            });
+
+        fetch("./Footer/footer.html")
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+                return response.text();
+            })
+            .then(data => {
+                document.querySelector("footer").innerHTML = data;
+            })
+            .catch(error => {
+                console.error('There has been a problem with your fetch operation:', error);
+            });
+    });
+</script>
+
+</body>
 </html>
