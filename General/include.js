@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function() {
-    fetch("./Navbar/navbar.html")
+    fetch("../Navbar/navbar.html")
         .then(response => {
             return response.text()
         })
@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", function() {
             document.querySelector("navbar").innerHTML = data;
         });
 
-    fetch("./Bottom/bottom.html")
+    fetch("../Bottom/bottom.html")
         .then(response => {
             return response.text()
         })
