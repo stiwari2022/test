@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", function() {
             return response.text()
         })
         .then(data => {
-            document.querySelector("header").innerHTML = data;
+            document.querySelector("navbar").innerHTML = data;
         });
 
     fetch("./Footer/footer.html")
